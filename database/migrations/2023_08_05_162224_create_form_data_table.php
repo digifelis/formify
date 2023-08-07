@@ -16,11 +16,9 @@ class CreateFormDataTable extends Migration
         Schema::create('form_data', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('display_name')->nullable();
-            $table->string('save_data')->nullable();
-            $table->unsignedBigInteger('user_id');
+            $table->text('display_name')->nullable();
+            $table->string('save_data');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

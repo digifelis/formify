@@ -15,10 +15,12 @@ class CreateMessageListsTable extends Migration
     {
         Schema::create('message_lists', function (Blueprint $table) {
             $table->id();
-            $table->text('data');
+            $table->string('message_data');
+            $table->string('form_id');
+            //$table->foreign('form_id')->references('id')->on('form_data');
             $table->timestamps();
-            $table->unsignedBigInteger('form_id');
-            $table->foreign('form_id')->references('id')->on('form_data')->onDelete('cascade');
+             // cascade means if we delete a category, all the products in that category will be deleted
+
         });
     }
 

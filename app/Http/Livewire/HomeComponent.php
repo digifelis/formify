@@ -4,10 +4,10 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class FormDataEditComponent extends Component
+class HomeComponent extends Component
 {
     public function render()
     {
-        return view('livewire.form-data-edit-component');
+        return view('livewire.home-component');
     }
 }

@@ -6,11 +6,22 @@ use Illuminate\Http\Request;
 use App\Models\FormData;
 class UserController extends Controller
 {
-    //
+    //    
+    /**
+     * formadd
+     *
+     * @return void
+     */
     public function formadd(){
         return view('user.formadd');
     }
-
+    
+    /**
+     * add
+     *
+     * @param  mixed $request
+     * @return void
+     */
     public function add(Request $request){
         /* check if request is valid */
         $request->validate([
@@ -45,7 +56,14 @@ class UserController extends Controller
         
         return view('user.formedit', ['form' => $form]);
     }
-    
+        
+    /**
+     * edit
+     *
+     * @param  mixed $request
+     * @param  mixed $id
+     * @return void
+     */
     public function edit(Request $request, $id){
         $request->validate([
             'name' => 'required',
@@ -63,13 +81,25 @@ class UserController extends Controller
         //return view('user.formedit');
         $request->session()->flash('message', 'Form has been updated successfully!');
         return redirect()->route('dashboard');
-    }
+    }    
+    /**
+     * delete
+     *
+     * @param  mixed $id
+     * @return void
+     */
     public function delete($id){
         $form = FormData::where('id',$id)
                         ->where('user_id', auth()->user()->id)->first();
         $form->delete();
         return redirect()->route('dashboard');
-    }
+    }    
+    /**
+     * index
+     *
+     * @param  mixed $request
+     * @return void
+     */
     public function index(Request $request)
     {
         $forms = FormData::where('user_id', auth()->user()->id)->get();

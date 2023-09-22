@@ -22,13 +22,19 @@
                 <div class="list-group">
                     <a href="{{route('dashboard')}}" class="list-group-item list-group-item-action active">Dashboard</a>
                     <a href="{{route('user.formadd')}}" class="list-group-item list-group-item-action">Add Form</a>
+                    
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="list-group-item list-group-item-action">Logout</a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                     <!-- Add more menu items here -->
                 </div>
             </div>
             
             <!-- Right Column - Table -->
             <div class="col-md-8">
-                <h2>Table Title</h2>
+                <h2>Form List</h2>
                 <table class="table table-bordered">
                     <thead>
                         <tr>

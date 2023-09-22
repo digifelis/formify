@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Mail;
 class MessageController extends Controller
 {
     //
+/**
+ * show
+ *
+ * @param  mixed $id
+ * @return void
+ */
 public function show($id)
 {
     $messageList = MessageList::where('form_id', $id)
@@ -17,6 +23,13 @@ public function show($id)
     return view('message.show', ['messages' => $messageList]);
 }
 
+/**
+ * submission
+ *
+ * @param  mixed $request
+ * @param  mixed $id
+ * @return void
+ */
 public function submission(Request $request, $id)
 {
     $messageData = '';

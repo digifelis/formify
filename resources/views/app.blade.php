@@ -176,8 +176,7 @@
       <!-- <h3 class="float-md-start mb-0">Cover</h3> -->
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-        <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-        <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
+        <a class="nav-link fw-bold py-1 px-0" href="{{route('login')}}">Login</a>
       </nav>
     </div>
   </header>
@@ -186,7 +185,18 @@
   <main class="px-3">
     <h1 style="font-size: 3rem; line-height: 1; padding-bottom:5%"><span class="font-Charm">f</span>ormify any site with No Code</h1>
     <div style="font-size: 1.25rem; line-height: 1.75rem; padding-bottom:5%">
-    <span class="font-Charm">f</span>ormify is an <span style="font-style: italic; font-weight: 600;">open source</span> application that lets you <span class="font-medium italic">create</span>, <span class="font-medium italic">manage</span> and <span class="font-medium italic">embed</span> forms on any site without writing single line of code
+    <span class="font-Charm">f</span>ormify is an <span style="font-style: italic; font-weight: 600;">
+    open source</span> application that lets you <span class="font-medium italic">create</span>, 
+    <span class="font-medium italic">manage</span> and <span class="font-medium italic">embed</span> 
+    forms on any site without writing single line of code
+    <br>
+    Create and manage multiple forms ⛏
+    <br>
+    Access all submitted forms 🦾
+    <br>
+    Embed forms on any site 📲
+        Embed forms easily 🍭
+
     </div>
     
     <p class="lead">
@@ -208,43 +218,18 @@
 
 
 
-<section id="features1">
+<section id="features">
   <div class="row">
-    <div class="col">
-    Create and manage multiple forms ⛏
+    <div class="col" >
+    
+    <img src="{{asset('assets/imgs/resim1.png')}}" alt="logo" width="120%" height="220%">
     </div>
   </div>
 </section>
-
-
-<section id="features2">
-  <div class="row">
-    <div class="col">
-    Access all submitted forms 🦾
-    </div>
-  </div>
-</section>
-
-<section id="features3">
-<div class="row">
-    <div class="col">
-    Embed forms on any site 📲
-    Embed forms easily 🍭
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
 
   <footer class="mt-auto text-white-50">
     <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+      <p>coded by Mansur BESTAS</p>
   </footer>
 </div>
 <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
